@@ -1,0 +1,124 @@
+
+::selection {
+  background: $selection-bg;
+  color: $main_color-bright;
+}
+
+body {
+  position: relative; // Required by scrollspy
+  font-family: Georgia,'Source Han Sans CN','Xin Gothic','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  font-size: $font-size-rayjune;
+  line-height: $line-height-base;
+  color: $text-color;
+  background: $body-bg-color;
+  line-height: 1.6;
+  +mobile() { padding-right: 0 !important; }
+  +tablet() { padding-right: 0 !important; }
+  +desktop-large() { font-size: $font-size-large; }
+}
+
+#sidebar {
+  font-size: 15px !important;
+}
+
+h2, h3, h4, h5, h6 {
+  color: $main_color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: Georgia,'Source Han Sans CN','Xin Gothic','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+}
+
+h1 {
+  font-size: $font-size-rayjune + 10px;
+}
+
+h2, h3, h4, h5, h6 { margin: 20px 0 15px; }
+
+for headline in (1..6) {
+  h{headline} {
+    font-size: $font-size-headings-base - $font-size-headings-step * headline + 5px;
+  }
+
+  +mobile() {
+    h{headline} {
+      font-size: $font-size-headings-base - $font-size-headings-step * headline - 1px;
+    }
+  }
+}
+
+p {
+  margin: 0 0 25px 0;
+
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  border-bottom: 1px solid $grey-dark;
+  word-wrap: break-word;
+
+  &:hover {
+    color: $link-hover-color;
+    border-bottom-color: $link-decoration-hover-color;
+  }
+}
+
+ul { list-style: none; }
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+hr {
+  margin: 40px 0;
+  height: 3px;
+  border: none;
+  background-color: $gray-lighter;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    white,
+    white 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+blockquote {
+  padding: 0 15px;
+
+  border-left: 5px solid $main_color;
+  background-color: whitesmoke;
+  cite::before {
+    content: "-";
+    padding: 0 5px;
+  }
+}
+
+strong {
+  font-weight: 900;
+  color: $main_color;
+}
+
+dt { font-weight: $font-weight-bolder;
+
+ }
+
+dd {
+  margin: 0;
+  padding: 0
+}

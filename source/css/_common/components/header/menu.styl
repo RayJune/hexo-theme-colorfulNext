@@ -1,0 +1,36 @@
+// Menu
+// --------------------------------------------------
+.menu {
+  margin-top: 20px;
+  padding-left: 0;
+  text-align: center;
+}
+
+.menu .menu-item {
+  display: inline-block;
+  margin: 0 10px;
+  @media screen and (max-width: 767px) {
+    margin-top: 10px;
+  }
+
+  a {
+    display: block;
+    font-size: 14px;
+    text-transform: capitalize;
+    line-height: inherit;
+    border-bottom: 1px solid $menu-link-border;
+    transition-property: border-color;
+    border-top: 1px solid $menu-link-border;
+    transition-duration: 0.56s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    &:hover {
+      border-bottom-color: $menu-link-hover-border;
+      border-top-color: $menu-link-hover-border;
+     }
+  }
+
+  .fa { margin-right: 5px; }
+}
+
+.use-motion .menu-item { opacity: 0; }

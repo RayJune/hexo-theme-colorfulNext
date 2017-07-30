@@ -1,0 +1,61 @@
+.site-meta {
+  margin: 0;
+  text-align: $site-meta-text-align;
+
+  +mobile() { text-align: center; }
+}
+
+.brand {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  padding: 0 30px;
+  color: $brand-color;
+  background: $main_color;
+  border-bottom: none;
+  border-color: white;
+  border: 3px solid $main_color;
+  transition-property: background-color;
+  transition-duration: 0.56s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.brand:hover {
+  color: $brand-color;
+  border-color: $main_color         ;
+  color: $main_color         ;
+  background: #fff;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 5px;
+  line-height: 33px;
+  vertical-align: top;
+}
+
+.site-title {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 33px;
+  font-size: $logo-font-size;
+  font-weight: normal;
+  font-family: $font-family-logo;
+}
+
+.site-subtitle {
+  margin-top: 10px;
+  font-size: $subtitle-font-size;
+  color: $subtitle-color;
+}
+
+.use-motion {
+  .brand { opacity: 0; }
+
+  .logo, .site-title, .site-subtitle {
+    opacity: 0;
+    position: relative;
+    top: -10px;
+  }
+}
